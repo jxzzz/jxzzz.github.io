@@ -99,6 +99,9 @@ ignore:
 ## Themes: https://hexo.io/themes/
 theme: polarbear
 
+# Custom your favicon.ico in `site/source`
+favicon: /favicon.ico
+
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
