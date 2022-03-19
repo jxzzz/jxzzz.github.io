@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="description" content="搭建博客过程"/>
+
+
+
+
+  <meta name="keywords" content="Hexo Github," />
+
+
+
+
+
+  <link rel="alternate" href="/default" title="Jx's Blog" >
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1.1" />
+
+
+
+<link rel="canonical" href="https://imxue.github.io/2022/03/19/搭建blog/"/>
+
+
+<meta name="description" content="开始的地方搭建博客是我刚学前端时的入门学习资料，前些时间发现之前的 blog，感觉很可惜，没能坚持下去。到如今已经工作四五年了，想重新拾起。虽然是很简单的，还是搞了很长时间啊。汗颜啦 😓 预期目标搭建一个简单的博客 Jx’s blog，很简单的功能   归档  关于  标签  前期准备 基础的 git ，node，github 使用 本地 git + node 环境 在 Github 新建一个名">
+<meta property="og:type" content="article">
+<meta property="og:title" content="搭建博客过程">
+<meta property="og:url" content="https://imxue.github.io/2022/03/19/%E6%90%AD%E5%BB%BAblog/index.html">
+<meta property="og:site_name" content="Jx&#39;s Blog">
+<meta property="og:description" content="开始的地方搭建博客是我刚学前端时的入门学习资料，前些时间发现之前的 blog，感觉很可惜，没能坚持下去。到如今已经工作四五年了，想重新拾起。虽然是很简单的，还是搞了很长时间啊。汗颜啦 😓 预期目标搭建一个简单的博客 Jx’s blog，很简单的功能   归档  关于  标签  前期准备 基础的 git ，node，github 使用 本地 git + node 环境 在 Github 新建一个名">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-03-19T21:31:45.000Z">
+<meta property="article:modified_time" content="2022-03-19T15:17:14.171Z">
+<meta property="article:author" content="Xue Jiang">
+<meta property="article:tag" content="Hexo Github">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=1.1" />
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
+
+
+
+
+
+<script type="text/javascript">
+  var themeConfig = {
+    fancybox: {
+      enable: false
+    },
+  };
+</script>
+
+
+
+
+  
+
+
+
+    <title> 搭建博客过程 - Jx's Blog </title>
+  <meta name="generator" content="Hexo 6.1.0"></head>
+
+  <body>
+    <div id="page">
+      <header id="masthead"><div class="site-header-inner">
+    <h1 class="site-title">
+        <a href="/." class="logo">Jx's Blog</a>
+    </h1>
+
+    <nav id="nav-top">
+        
+            <ul id="menu-top" class="nav-top-items">
+                
+                    <li class="menu-item">
+                        <a href="/archives">
+                            
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li class="menu-item">
+                        <a href="/about">
+                            
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        
+  </nav>
+</div>
+
+      </header>
+      <div id="content">
+        
+    <div id="primary">
+        
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          搭建博客过程
+        
+      </h1>
+
+      <time class="post-time">
+          Mar 19 2022
+      </time>
+    </header>
+
+
+
+    
+            <div class="post-content">
+            <h3 id="开始的地方"><a href="#开始的地方" class="headerlink" title="开始的地方"></a>开始的地方</h3><p>搭建博客是我刚学前端时的入门学习资料，前些时间发现之前的 blog，感觉很可惜，没能坚持下去。到如今已经工作四五年了，想重新拾起。<br>虽然是很简单的，还是搞了很长时间啊。汗颜啦 😓</p>
+<h2 id="预期目标"><a href="#预期目标" class="headerlink" title="预期目标"></a>预期目标</h2><p>搭建一个简单的博客 <a href="https://imxue.github.io/">Jx’s blog</a>，很简单的功能</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 归档</li>
+<li><input checked="" disabled="" type="checkbox"> 关于</li>
+<li><input checked="" disabled="" type="checkbox"> 标签</li>
+</ul>
+<h2 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h2><ul>
+<li>基础的 git ，node，github 使用</li>
+<li>本地 git + node 环境</li>
+<li>在 Github 新建一个名为 <strong>[userName].github.io</strong> 仓库</li>
+<li>[可选] 选择一个<a target="_blank" rel="noopener" href="https://hexo.io/themes/">主题</a>，我选择的是 <a target="_blank" rel="noopener" href="https://github.com/frostfan/hexo-theme-polarbear">polarbear</a></li>
+</ul>
+<h2 id="具体实施"><a href="#具体实施" class="headerlink" title="具体实施"></a>具体实施</h2><h3 id="安装-hexo-cli"><a href="#安装-hexo-cli" class="headerlink" title="安装 hexo-cli"></a>安装 hexo-cli</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli // 全局安装hexo-cli  // 当然也可以局部安装</span><br></pre></td></tr></table></figure>
+
+<h3 id="初始化-hexo-项目"><a href="#初始化-hexo-项目" class="headerlink" title="初始化 hexo 项目"></a>初始化 hexo 项目</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init &lt;folder&gt; // 生成一个hexo 项目</span><br><span class="line">$ <span class="built_in">cd</span> &lt;folder&gt;</span><br><span class="line">$ npm install // 安装依赖</span><br><span class="line"></span><br><span class="line">$ git init // 初始git</span><br></pre></td></tr></table></figure>
+
+<h3 id="添加主题"><a href="#添加主题" class="headerlink" title="添加主题"></a>添加主题</h3><blockquote>
+<p>根据你选择的主题有不同的安装方式，看相关主题的使用说明。</p>
+</blockquote>
+<p>hexo 项目中设置主题是在项目根路径下<strong>_config.yml</strong> 文件中设置 <strong>theme</strong>字段。</p>
+<p>在本文选择的<a target="_blank" rel="noopener" href="https://hexo.io/themes/">主题</a>中，需要安装两个依赖。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-renderer-scss hexo-renderer-swig --save</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>你可以 fork 下你主题的项目，到你的 githu 仓库里,这样修改起来方便些。</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git submoudle add  https://github.com/imxue/hexo-theme-polarbear  themes/polarbear</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>这里有个 submodule(子模块) 的<a target="_blank" rel="noopener" href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">概念</a>,个人理解就是在一个 git 项目中包含另外一个 git 项目，主项目依赖里面的项目，但子项目其实是一个独立的项目。这样的好处是隔离便于管理。</p>
+</blockquote>
+<p><strong>本地 hexo 项目应该已经完成</strong></p>
+<p>在 Github 新建一个名为 <strong>[userName].github.io</strong> 空仓库<br>在本地仓库中添加</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$  git remote add origin https://github.com/imxue/imxue.github.io.git</span><br></pre></td></tr></table></figure>
+
+<p>本地测试完好推送远程仓库</p>
+<blockquote>
+<p>SSH keys 应该有生成吧</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$  git push origin master:master</span><br></pre></td></tr></table></figure>
+
+<h3 id="添加-workflows"><a href="#添加-workflows" class="headerlink" title="添加 workflows"></a>添加 workflows</h3><blockquote>
+<p>在 <strong>.github&#x2F;workflows&#x2F;pages.yml</strong> ，如果没有就新建一个</p>
+</blockquote>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">Pages</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">push:</span></span><br><span class="line">    <span class="attr">branches:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">master</span> <span class="comment"># default branch</span></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">pages:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">uses:</span> <span class="string">actions/checkout@v2</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Checkout</span> <span class="string">theme</span> <span class="string">repo</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/checkout@v2</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">repository:</span> <span class="string">imxue/hexo-theme-polarbear</span></span><br><span class="line">          <span class="attr">ref:</span> <span class="string">master</span></span><br><span class="line">          <span class="attr">path:</span> <span class="string">themes/polarbear</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Use</span> <span class="string">Node.js</span> <span class="number">14.</span><span class="string">x</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/setup-node@v2</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">node-version:</span> <span class="string">&#x27;14&#x27;</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Cache</span> <span class="string">NPM</span> <span class="string">dependencies</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/cache@v2</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">path:</span> <span class="string">node_modules</span></span><br><span class="line">          <span class="attr">key:</span> <span class="string">$&#123;&#123;</span> <span class="string">runner.OS</span> <span class="string">&#125;&#125;-npm-cache</span></span><br><span class="line">          <span class="attr">restore-keys:</span> <span class="string">|</span></span><br><span class="line"><span class="string">            $&#123;&#123; runner.OS &#125;&#125;-npm-cache</span></span><br><span class="line"><span class="string"></span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Install</span> <span class="string">Dependencies</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">npm</span> <span class="string">install</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Build</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">npm</span> <span class="string">run</span> <span class="string">build</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Deploy</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">peaceiris/actions-gh-pages@v3</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">github_token:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.GITHUB_TOKEN</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="attr">publish_dir:</span> <span class="string">./public</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$  git push origin master:master</span><br></pre></td></tr></table></figure>
+
+<p>不出意外在你的 Settings&#x2F;Code and automation&#x2F;pages 页面上选择 gh-pages(自动生成的)分支 ，点 save 就看到 博客 地址</p>
+<h3 id="学习体会"><a href="#学习体会" class="headerlink" title="学习体会"></a>学习体会</h3><p>现在的工程化做的都挺好， 一套下来 10 个命令应该可以搭建成功以个博客。<br><br/><br>我在这其中遇到很多问题，比如我刚开始看的是中文文档的 hexo，使用的是 CircleCI，搭建失败。会提示我超过用户最大数。<br>然后切换英文文档，之前都是很顺利的，就是在 deploy 总是说找不到主题文件。。然后我就必须要去理解，githubAction 做了什么，然后我查看 actions&#x2F;checkout@v2，可能会解决我的问题。<br><br/><br>所以我感觉过程本身并不难，需要去理解原理。</p>
+<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><blockquote>
+<p>需要去阅读的资料</p>
+</blockquote>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://hexo.io/docs/">Hexo 文档</a></li>
+<li><a target="_blank" rel="noopener" href="https://git-scm.com/">Git 文档</a></li>
+<li><a target="_blank" rel="noopener" href="https://docs.github.com/cn/actions">GitHubAction 文档</a></li>
+<li><a target="_blank" rel="noopener" href="https://docs.github.com/cn/pages/getting-started-with-github-pages">GithubPages 文档</a></li>
+</ul>
+
+            </div>
+          
+
+    
+      <footer class="post-footer">
+		
+		<div class="post-tags">
+		  
+			<a href="/tags/Hexo-Github/">Hexo Github</a>
+		  
+		</div>
+		
+
+        
+        
+  <nav class="post-nav">
+    
+    
+  </nav>
+
+        
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+      </footer>
+    
+  </article>
+
+    </div>
+
+      </div>
+
+      <footer id="colophon"><span class="copyright-year">
+    
+        &copy;
+    
+        2014 -
+    
+    2022
+    <span class="footer-author">Xue Jiang.</span>
+    <span class="power-by">
+        Powered by <a class="hexo-link" target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> and <a class="theme-link" target="_blank" rel="noopener" href="https://github.com/frostfan/hexo-theme-polarbear">Polar Bear</a>
+    </span>
+</span>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+    
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+
+    <script type="text/javascript" src="/js/src/theme.js?v=1.1"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=1.1"></script>
+
+  </body>
+</html>
