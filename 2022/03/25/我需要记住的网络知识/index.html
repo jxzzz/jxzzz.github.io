@@ -35,15 +35,15 @@
 <link rel="canonical" href="https://imxue.github.io/2022/03/25/我需要记住的网络知识/"/>
 
 
-<meta name="description" content="HTTP缓存缓存根据缓存位置可以分为内存缓存，硬盘缓存，service worker 等.. 缓存根据缓存策略分为强缓存和协商缓存 强缓存和强缓存相关的字段 Expires 和 cache-control 协商缓存和强缓存相关的字段 Etag 和 Last-modified 实践Cache-Control:max-age&#x3D;[sec]该值设置后，过期时间为获取资源时间加上当前秒数,在这个时间中，会去">
+<meta name="description" content="HTTP缓存缓存根据缓存位置可以分为内存缓存，硬盘缓存，service worker 等.. 缓存根据缓存策略分为强缓存和协商缓存 强缓存和强缓存相关的字段 Expires 和 cache-control 协商缓存和强缓存相关的字段 Etag 和 Last-modified 实践Cache-Control:max-age&#x3D;[sec]该值设置后，过期时间为获取资源时间加上当前秒数,在这个时">
 <meta property="og:type" content="article">
 <meta property="og:title" content="我需要记住的网络知识">
 <meta property="og:url" content="https://imxue.github.io/2022/03/25/%E6%88%91%E9%9C%80%E8%A6%81%E8%AE%B0%E4%BD%8F%E7%9A%84%E7%BD%91%E7%BB%9C%E7%9F%A5%E8%AF%86/index.html">
 <meta property="og:site_name" content="Jx&#39;s Blog">
-<meta property="og:description" content="HTTP缓存缓存根据缓存位置可以分为内存缓存，硬盘缓存，service worker 等.. 缓存根据缓存策略分为强缓存和协商缓存 强缓存和强缓存相关的字段 Expires 和 cache-control 协商缓存和强缓存相关的字段 Etag 和 Last-modified 实践Cache-Control:max-age&#x3D;[sec]该值设置后，过期时间为获取资源时间加上当前秒数,在这个时间中，会去">
+<meta property="og:description" content="HTTP缓存缓存根据缓存位置可以分为内存缓存，硬盘缓存，service worker 等.. 缓存根据缓存策略分为强缓存和协商缓存 强缓存和强缓存相关的字段 Expires 和 cache-control 协商缓存和强缓存相关的字段 Etag 和 Last-modified 实践Cache-Control:max-age&#x3D;[sec]该值设置后，过期时间为获取资源时间加上当前秒数,在这个时">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-03-25T18:03:38.000Z">
-<meta property="article:modified_time" content="2022-03-25T15:15:03.920Z">
+<meta property="article:modified_time" content="2022-03-25T15:59:02.945Z">
 <meta property="article:author" content="Xue Jiang">
 <meta property="article:tag" content="HTTP HTTPCACHE">
 <meta name="twitter:card" content="summary">
@@ -120,6 +120,8 @@
           我需要记住的网络知识
         
       </h1>
+       
+        
 
       <time class="post-time">
           3月 25 2022
@@ -134,7 +136,7 @@
 <p>缓存根据缓存策略分为<strong>强缓存</strong>和<strong>协商缓存</strong></p>
 <h4 id="强缓存"><a href="#强缓存" class="headerlink" title="强缓存"></a>强缓存</h4><p>和强缓存相关的字段 <strong>Expires</strong> 和 <strong>cache-control</strong></p>
 <h4 id="协商缓存"><a href="#协商缓存" class="headerlink" title="协商缓存"></a>协商缓存</h4><p>和强缓存相关的字段 <strong>Etag</strong> 和 <strong>Last-modified</strong></p>
-<h4 id="实践"><a href="#实践" class="headerlink" title="实践"></a>实践</h4><p><code>Cache-Control:max-age=[sec]</code><br>该值设置后，过期时间为获取资源时间加上当前秒数,在这个时间中，会去缓存。</p>
+<h4 id="实践"><a href="#实践" class="headerlink" title="实践"></a>实践</h4><p><strong>Cache-Control:max-age&#x3D;[sec]</strong><br>该值设置后，过期时间为获取资源时间加上当前秒数,在这个时间中，会去缓存。</p>
 <blockquote>
 <p>如果在 Cache-Control 响应头设置了 “max-age” 或者 “s-max-age” 指令，那么 Expires 头会被忽略。</p>
 </blockquote>
@@ -144,8 +146,7 @@
 <li>缓存未更改的资源</li>
 </ul>
 <h2 id="相关字段"><a href="#相关字段" class="headerlink" title="相关字段"></a>相关字段</h2><p><strong>If-Modified-Since</strong><br>出现在缓存过，但没有 Etag 字段， 请求给定 url 是会加上这个字段<br>是一个条件请求字段， 意思是需要服务端判断，是否在这个时间之后对文件有所更改，才会将资源返回，状态码为 200 。如果没有更改就是 304.</p>
-<p><strong>If-None-Matche</strong></p>
-<p>有 Etag 字段， 请求给定 url 是会加上这个字段 ， 他的优先级高过 <strong>If-Modified-Since</strong><br>也是是一个条件请求字段， 匹配 Etag 匹配上，才会将资源返回，状态码为 304 。如果没有更改就是 200.<br>支持 GET and HEAD 方法</p>
+<p><strong>If-None-Matche</strong><br>有 Etag 字段， 请求给定 url 是会加上这个字段 ， 他的优先级高过 <strong>If-Modified-Since</strong><br>也是是一个条件请求字段， 匹配 Etag 匹配上，才会将资源返回，状态码为 304 。如果没有更改就是 200.<br>支持 GET and HEAD 方法</p>
 <p><strong>*Last-Modified</strong><br>这是一个响应头字段 ， <strong>If-Modified-Since</strong>会用到这个时间</p>
 <blockquote>
 <p>未完待续</p>
@@ -171,7 +172,7 @@
     
     
       <a class="next" href="/2022/03/25/NodejsWeb%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">
-        <span class="next-text nav-default">NodejsWeb应用开发</span>
+        <span class="next-text nav-default">NodejsWeb 应用开发</span>
         <span class="prev-text nav-mobile">下一篇</span>
         <i class="iconfont icon-right"></i>
       </a>
@@ -196,7 +197,7 @@
     
         &copy;
     
-        2014 -
+        2016 -
     
     2022
     <span class="footer-author">Xue Jiang.</span>
