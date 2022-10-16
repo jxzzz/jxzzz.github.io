@@ -12,7 +12,7 @@
 
 
 
-  <meta name="description" content="Canvas初体验"/>
+  <meta name="description" content="浏览器下的事件循环原理"/>
 
 
 
@@ -30,17 +30,17 @@
 
 
 
-<link rel="canonical" href="https://imxue.github.io/2022/03/26/Canvas初体验/"/>
+<link rel="canonical" href="https://imxue.github.io/2022/10/16/浏览器下的事件循环原理/"/>
 
 
-<meta name="description" content="写点东西">
+<meta name="description" content="事件循环原理JavaScript 是一门单线程非阻塞的脚本语言，单线程意味着，JavaScript 代码在执行的任何时候，都只有一个主线程来处理所有的任务。 直观来说，就是 js 同一时间只能处理同一同一件事情。但是在我们去请求一个接口时，我们依然可以点击按钮，出现 js 交互。能这么做的原因就是浏览器的任务调度。也就是事件循环。 浏览器环境下 JS 的事件循环原理浏览器将任务分为同步任务和异步任">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Canvas初体验">
-<meta property="og:url" content="https://imxue.github.io/2022/03/26/Canvas%E5%88%9D%E4%BD%93%E9%AA%8C/index.html">
+<meta property="og:title" content="浏览器下的事件循环原理">
+<meta property="og:url" content="https://imxue.github.io/2022/10/16/%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%8B%E7%9A%84%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF%E5%8E%9F%E7%90%86/index.html">
 <meta property="og:site_name" content="Jx&#39;s Blog">
-<meta property="og:description" content="写点东西">
+<meta property="og:description" content="事件循环原理JavaScript 是一门单线程非阻塞的脚本语言，单线程意味着，JavaScript 代码在执行的任何时候，都只有一个主线程来处理所有的任务。 直观来说，就是 js 同一时间只能处理同一同一件事情。但是在我们去请求一个接口时，我们依然可以点击按钮，出现 js 交互。能这么做的原因就是浏览器的任务调度。也就是事件循环。 浏览器环境下 JS 的事件循环原理浏览器将任务分为同步任务和异步任">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-03-26T22:55:48.000Z">
+<meta property="article:published_time" content="2022-10-16T16:19:10.000Z">
 <meta property="article:modified_time" content="2022-10-16T08:30:42.357Z">
 <meta property="article:author" content="Xue Jiang">
 <meta name="twitter:card" content="summary">
@@ -68,7 +68,7 @@
 
 
 
-    <title> Canvas初体验 - Jx's Blog </title>
+    <title> 浏览器下的事件循环原理 - Jx's Blog </title>
   <meta name="generator" content="Hexo 6.1.0"></head>
 
   <body>
@@ -114,14 +114,14 @@
     <header class="post-header">
       <h1 class="post-title">
         
-          Canvas初体验
+          浏览器下的事件循环原理
         
       </h1>
        
         
 
       <time class="post-time">
-          3月 26 2022
+          10月 16 2022
       </time>
     </header>
 
@@ -129,7 +129,21 @@
 
     
             <div class="post-content">
-            
+            <h1 id="事件循环原理"><a href="#事件循环原理" class="headerlink" title="事件循环原理"></a>事件循环原理</h1><p>JavaScript 是一门单线程非阻塞的脚本语言，单线程意味着，JavaScript 代码在执行的任何时候，都只有一个主线程来处理所有的任务。</p>
+<p>直观来说，就是 js 同一时间只能处理同一同一件事情。但是在我们去请求一个接口时，我们依然可以点击按钮，出现 js 交互。能这么做的原因就是浏览器的任务调度。也就是事件循环。</p>
+<h2 id="浏览器环境下-JS-的事件循环原理"><a href="#浏览器环境下-JS-的事件循环原理" class="headerlink" title="浏览器环境下 JS 的事件循环原理"></a>浏览器环境下 JS 的事件循环原理</h2><p>浏览器将任务分为同步任务和异步任务</p>
+<p>当执行一个脚本时，js 引擎会解析这段代码，并将同步代码按照执行顺序入栈。遇到异步任务时，会将任务挂起，带异步任务返回结果，并不是直接入栈，而是存在任务队列中，在主线程在执行栈中清空，会一次读取任务队列的结果</p>
+<h2 id="任务队列"><a href="#任务队列" class="headerlink" title="任务队列"></a>任务队列</h2><p>在异步任务也有优先级 ，所有又产生宏任务（macro task）和微任务（micro task）</p>
+<ul>
+<li>macro task</li>
+</ul>
+<p>setInterval()；setTimeout()</p>
+<ul>
+<li>micro task</li>
+</ul>
+<p>new Promise()；new MutaionObserver()</p>
+<p>当执行栈清空后，主线程会先去查看微任务队列，优先读取微任务</p>
+
             </div>
           
 
@@ -141,15 +155,9 @@
         
   <nav class="post-nav">
     
-      <a class="prev" href="/2022/10/13/Nginx%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/">
-        <i class="iconfont icon-left"></i>
-        <span class="prev-text nav-default">Nginx使用记录</span>
-        <span class="prev-text nav-mobile">上一篇</span>
-      </a>
     
-    
-      <a class="next" href="/2022/03/25/%E6%88%91%E9%9C%80%E8%A6%81%E8%AE%B0%E4%BD%8F%E7%9A%84%E7%BD%91%E7%BB%9C%E7%9F%A5%E8%AF%86/">
-        <span class="next-text nav-default">我需要记住的网络知识</span>
+      <a class="next" href="/2022/10/16/JavaScript%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87/">
+        <span class="next-text nav-default">JavaScript执行上下文</span>
         <span class="prev-text nav-mobile">下一篇</span>
         <i class="iconfont icon-right"></i>
       </a>
