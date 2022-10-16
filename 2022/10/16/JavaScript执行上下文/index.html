@@ -12,12 +12,12 @@
 
 
 
-  <meta name="description" content="不得不学的React"/>
+  <meta name="description" content="JavaScript执行上下文"/>
 
 
 
 
-  <meta name="keywords" content="React," />
+  <meta name="keywords" content="javasccript," />
 
 
 
@@ -32,20 +32,20 @@
 
 
 
-<link rel="canonical" href="https://imxue.github.io/2022/03/25/不得不学的React/"/>
+<link rel="canonical" href="https://imxue.github.io/2022/10/16/JavaScript执行上下文/"/>
 
 
-<meta name="description" content="写点东西">
+<meta name="description" content="正确的了解 JavaScript 执行上下文，有利于理解 JavaScript 的其他概念，如闭包，this 指向，提交机制。  执行上下文就是 JavaScript 就是代码执行时所在的抽象环境概念。执行上下文总共有三中类型  全局上下文 函数执行上下文 Eval 函数执行上下文 【eval 函数时，执行上下文，应不推荐使用，暂不讨论】  上下文在创建阶段发生如下三件事  确定 this 的值">
 <meta property="og:type" content="article">
-<meta property="og:title" content="不得不学的React">
-<meta property="og:url" content="https://imxue.github.io/2022/03/25/%E4%B8%8D%E5%BE%97%E4%B8%8D%E5%AD%A6%E7%9A%84React/index.html">
+<meta property="og:title" content="JavaScript执行上下文">
+<meta property="og:url" content="https://imxue.github.io/2022/10/16/JavaScript%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87/index.html">
 <meta property="og:site_name" content="Jx&#39;s Blog">
-<meta property="og:description" content="写点东西">
+<meta property="og:description" content="正确的了解 JavaScript 执行上下文，有利于理解 JavaScript 的其他概念，如闭包，this 指向，提交机制。  执行上下文就是 JavaScript 就是代码执行时所在的抽象环境概念。执行上下文总共有三中类型  全局上下文 函数执行上下文 Eval 函数执行上下文 【eval 函数时，执行上下文，应不推荐使用，暂不讨论】  上下文在创建阶段发生如下三件事  确定 this 的值">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-03-25T17:59:52.000Z">
+<meta property="article:published_time" content="2022-10-16T14:28:27.000Z">
 <meta property="article:modified_time" content="2022-10-16T07:06:17.526Z">
 <meta property="article:author" content="Xue Jiang">
-<meta property="article:tag" content="React">
+<meta property="article:tag" content="javasccript">
 <meta name="twitter:card" content="summary">
 
 
@@ -71,7 +71,7 @@
 
 
 
-    <title> 不得不学的React - Jx's Blog </title>
+    <title> JavaScript执行上下文 - Jx's Blog </title>
   <meta name="generator" content="Hexo 6.1.0"></head>
 
   <body>
@@ -117,14 +117,14 @@
     <header class="post-header">
       <h1 class="post-title">
         
-          不得不学的React
+          JavaScript执行上下文
         
       </h1>
        
         
 
       <time class="post-time">
-          3月 25 2022
+          10月 16 2022
       </time>
     </header>
 
@@ -132,7 +132,26 @@
 
     
             <div class="post-content">
-            
+            <blockquote>
+<p>正确的了解 JavaScript 执行上下文，有利于理解 JavaScript 的其他概念，如闭包，this 指向，提交机制。</p>
+</blockquote>
+<p>执行上下文就是 JavaScript 就是代码执行时所在的抽象环境概念。<br>执行上下文总共有三中类型</p>
+<ul>
+<li>全局上下文</li>
+<li>函数执行上下文</li>
+<li>Eval 函数执行上下文 【eval 函数时，执行上下文，应不推荐使用，暂不讨论】</li>
+</ul>
+<h2 id="上下文"><a href="#上下文" class="headerlink" title="上下文"></a>上下文</h2><p>在创建阶段发生如下三件事</p>
+<ul>
+<li>确定 this 的值</li>
+<li>词法环境创建</li>
+<li>变量环境创建</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">ExectionContext</span> = &#123;</span><br><span class="line">    <span class="title class_">ThisBinding</span> = <span class="language-xml"><span class="tag">&lt;<span class="name">this</span> <span class="attr">value</span>&gt;</span>,</span></span><br><span class="line"><span class="language-xml">    LexicalEnvironment = &#123;&#125;,</span></span><br><span class="line"><span class="language-xml">    VarialeEnvironment = &#123;&#125;</span></span><br><span class="line"><span class="language-xml">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>在这个阶段将会决定 this 执行谁，<br>在全局环境中 this 执行全局对象<br>在函数执行上下文中，this 指向取决于函数的调用方式。查看函数在那个环境中执行。</p>
+<p>待续</p>
+
             </div>
           
 
@@ -141,7 +160,7 @@
 		
 		<div class="post-tags">
 		  
-			<a href="/tags/React/">React</a>
+			<a href="/tags/javasccript/">javasccript</a>
 		  
 		</div>
 		
@@ -150,15 +169,9 @@
         
   <nav class="post-nav">
     
-      <a class="prev" href="/2022/03/25/NodejsWeb%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">
-        <i class="iconfont icon-left"></i>
-        <span class="prev-text nav-default">NodejsWeb 应用开发</span>
-        <span class="prev-text nav-mobile">上一篇</span>
-      </a>
     
-    
-      <a class="next" href="/2022/03/22/Node%E5%88%9D%E4%BD%93%E9%AA%8C/">
-        <span class="next-text nav-default">Nodejs初体验</span>
+      <a class="next" href="/2022/10/16/Vue%E6%A1%86%E6%9E%B6%E5%8E%9F%E7%90%86/">
+        <span class="next-text nav-default">Vue框架原理</span>
         <span class="prev-text nav-mobile">下一篇</span>
         <i class="iconfont icon-right"></i>
       </a>
